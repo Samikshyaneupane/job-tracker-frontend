@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #faf7f5;
+  color: #4a4a4a;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #d8c8f0;
+  color: #4a3b63;
+  transition: opacity 0.15s, transform 0.1s;
+}
+button:hover { opacity: 0.85; }
+button:active { transform: scale(0.98); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+button.secondary { background: #f0e8e0; color: #6b5d54; }
+button.danger { background: #fadde0; color: #b4566e; }
+button.primary { background: #b8ddd0; color: #2f5d4f; }
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ecdfe8;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fffdfc;
+  color: #4a4a4a;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #d8c8f0;
+}
+textarea { min-height: 70px; resize: vertical; }
+
+.error {
+  background: #fadde0;
+  color: #a4455c;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* Auth pages */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5e9f0 0%, #e8f0f2 100%);
+}
+.auth-form {
+  background: #fffdfc;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(200, 180, 210, 0.25);
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.auth-form h2 { margin-bottom: 8px; color: #6b5d7a; }
+.auth-form p { font-size: 14px; text-align: center; color: #a89a9e; }
+.auth-form a { color: #a68bc9; text-decoration: none; font-weight: 500; }
+
+/* Dashboard */
+.dashboard {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 60px;
+}
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.dashboard-header h1 { font-size: 22px; color: #6b5d7a; }
+.dashboard-header > div { display: flex; align-items: center; gap: 12px; }
+.username { font-size: 14px; color: #a89a9e; }
+
+.stats-section, .applications-list {
+  background: #fffdfc;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(200, 180, 210, 0.15);
+  margin-bottom: 20px;
+}
+.stats-section h3 { margin-bottom: 12px; font-size: 15px; color: #8a7a90; }
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.filters { display: flex; gap: 6px; flex-wrap: wrap; }
+.filter-btn {
+  background: #fffdfc;
+  border: 1px solid #ecdfe8;
+  color: #8a7a90;
+  font-weight: 400;
+  padding: 6px 12px;
+}
+.filter-btn.active { background: #d8c8f0; color: #4a3b63; border-color: #d8c8f0; }
+
+.app-form {
+  background: #fffdfc;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(200, 180, 210, 0.15);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-actions { display: flex; gap: 8px; }
+
+.applications-list { display: flex; flex-direction: column; gap: 12px; }
+.app-item {
+  border: 1px solid #f0e8e0;
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: #fffefd;
+}
+.app-item-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.app-item-main h4 { font-size: 15px; color: #5a4d52; }
+.app-item-main .company { font-size: 13px; color: #a89a9e; margin-top: 2px; }
+.status-badge {
+  color: #4a3b40;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.app-item-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: #a89a9e;
+  margin-top: 8px;
+}
+.app-item-meta a { color: #a68bc9; }
+.notes { font-size: 13px; color: #8a7a80; margin-top: 8px; }
+.app-item-actions { display: flex; gap: 8px; margin-top: 10px; }
+.app-item-actions button { padding: 5px 12px; font-size: 13px; }
+
+.empty-state { color: #c4b8bc; text-align: center; padding: 20px 0; font-size: 14px; }
